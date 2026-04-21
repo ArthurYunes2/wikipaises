@@ -1,0 +1,194 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  padding: 56px 0 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.heroEyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.heroTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.heroSub {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+}
+
+.controls {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--cream-dark);
+}
+
+.controlsInner {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchWrap {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 14px;
+  height: 44px;
+}
+
+.searchIcon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  background: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink);
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: var(--ink-muted);
+}
+
+.filterWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 14px;
+  height: 44px;
+}
+
+.filterIcon {
+  font-size: 0.9rem;
+}
+
+.select {
+  border: none;
+  background: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink);
+  cursor: pointer;
+  outline: none;
+  padding-right: 4px;
+}
+
+.gridSection {
+  padding: 40px 0;
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.skeletonCard {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.skeletonFlag {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.skeletonBody {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeletonLine {
+  height: 14px;
+  border-radius: 3px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.pageBtn {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-light);
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+
+.pageBtn:hover:not(:disabled) {
+  color: var(--accent);
+}
+
+.pageBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+
+.error, .empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}

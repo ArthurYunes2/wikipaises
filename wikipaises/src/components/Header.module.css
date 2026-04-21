@@ -1,0 +1,100 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(245, 240, 232, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.backBtn {
+  font-size: 0.78rem;
+  font-family: 'DM Mono', monospace;
+  color: var(--ink-light);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.backBtn:hover {
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navItem {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.navItem:hover {
+  color: var(--ink);
+  background: var(--cream-dark);
+}
+
+.navItem.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  border-radius: 0;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.icon:hover {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    display: none;
+  }
+  .inner {
+    justify-content: space-between;
+  }
+}
