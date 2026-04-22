@@ -88,7 +88,7 @@ src/
 
 ## 📄 Deploy
 
-Aplicação publicada em: **[link aqui]**
+Aplicação publicada em: **https://wikipaises-1eke.vercel.app**
 
 ---
 
